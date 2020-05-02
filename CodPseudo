@@ -1,0 +1,120 @@
+Algoritmo sin_titulo
+	Escribir '¿Cuantos digitos tiene su rut, sin el digito verificador?'
+	definir tamanoRut Como Entero
+	leer tamanoRut
+	definir cont Como Entero
+	cont = 0
+	definir a,b,c,d,e,f,g,h como entero
+	Si tamanoRut = 7 || tamanoRut = 8 Entonces
+		Mientras cont < tamanoRut Hacer
+			Si cont == 0 Entonces
+				escribir 'Ingrese el digito 1 de su rut'
+				leer a
+			FinSi
+			Si cont == 1 Entonces
+				escribir 'Ingrese el digito 2 de su rut'
+				leer b
+			FinSi
+			Si cont == 2 Entonces
+				escribir 'Ingrese el digito 3 de su rut'
+				leer c
+			FinSi
+			Si cont == 3 Entonces
+				escribir 'Ingrese el digito 4 de su rut'
+				leer d
+			FinSi
+			Si cont == 4 Entonces
+				escribir 'Ingrese el digito 5 de su rut'
+				leer e
+			FinSi
+			Si cont == 5 Entonces
+				escribir 'Ingrese el digito 6 de su rut'
+				leer f
+			FinSi
+			Si cont == 6 Entonces
+				escribir 'Ingrese el digito 7 de su rut'
+				leer g
+			FinSi
+			Si cont == 7 Entonces
+				escribir 'Ingrese el digito 8 de su rut'
+				leer h
+			FinSi
+			cont = cont + 1
+		Fin Mientras
+	SiNo
+		escribir 'Su rut sin digito debe tener 7 digitos como minimo u 8 dígitos como máximo, intente de nuevo'
+	Fin Si
+	
+
+	Si tamanoRut = 7 entonces
+		g = g * 2
+		f = f * 3
+		e = e * 4
+		d = d * 5
+		c = c * 6
+		b = b * 7
+		a = a * 2
+		definir sumaRut Como Entero
+		sumaRut = a+b+c+d+e+f+g
+		
+		definir modRut Como Real
+		modRut = sumaRut mod 11
+		
+		definir digitoV Como Entero
+		digitoV = 11 - modRut
+		
+	
+	
+		Si digitoV >0 & digitoV <12 Entonces
+			Si digitoV == 11 entonces
+				escribir 'Su digito verificador es 0'
+			SiNo Si digitoV == 10 Entonces
+					escribir 'Su digito verificador es K'
+				SiNo
+					escribir 'Su digito verificador es ',digitoV,''
+				Fin Si
+				
+				
+			Fin Si
+			
+		FinSi
+		
+		
+	FinSi
+	Si tamanoRut = 8 entonces
+		
+		h = h * 2
+		g = g * 3
+		f = f * 4
+		e = e * 5
+		d = d * 6
+		c = c * 7
+		b = b * 2
+		a = a * 3
+		
+		definir sumaRut Como Entero
+		sumaRut = a+b+c+d+e+f+g+h
+		
+		definir modRut Como Entero
+		modRut = sumaRut mod 11
+		
+		definir digitoV Como Entero
+		digitoV = 11 - modRut
+	
+		Si digitoV >0 & digitoV <12 Entonces
+			Si digitoV == 11 entonces
+			escribir 'Su digito verificador es 0'
+		SiNo Si digitoV == 10 Entonces
+			escribir 'Su digito verificador es K'
+		SiNo
+			escribir 'Su digito verificador es ',digitoV,''
+		Fin Si
+	
+		
+		Fin Si
+		
+	FinSi
+	
+	FinSi
+	
+FinAlgoritmo
